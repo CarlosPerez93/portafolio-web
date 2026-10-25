@@ -5,8 +5,9 @@ import type { Profile } from '../types'
  * Perfil público.
  *
  * Procedencia: nombre, avatar, handle, fecha de alta y número de repositorios
- * provienen de la API pública de GitHub; correo y perfil profesional, de la
- * identidad verificada de LinkedIn. No hay datos estimados en este objeto.
+ * provienen de la API pública de GitHub; correo, ubicación, perfil profesional
+ * y etapas de empleo y formación, de la copia de datos del perfil de LinkedIn.
+ * No hay datos estimados en este objeto.
  */
 export const profile: Profile = {
   name: 'Carlos Pérez',
@@ -17,6 +18,7 @@ export const profile: Profile = {
   bio: [
     'Trabajo en el punto donde el diseño se encuentra con el código. Me interesan las interfaces que se leen con claridad, se recorren con el teclado y siguen siendo comprensibles cuando el proyecto crece.',
     'En GitHub desde 2019, con 19 repositorios públicos: desde un carrito de la compra con Context y localStorage hasta un asistente de escritorio en Python que conversa con Gemini y ejecuta herramientas del sistema.',
+    'El trabajo es anterior al código público: desarrollador front-end desde enero de 2020, con etapas en Colombia y en España.',
   ],
   focus: [
     'Interfaces en React y TypeScript',
@@ -26,7 +28,7 @@ export const profile: Profile = {
   ],
   avatar: avatarUrl,
   email: 'cpapcp23@gmail.com',
-  location: null,
+  location: 'Higuera la Real, Extremadura, España',
   githubHandle: 'CarlosPerez93',
   githubUrl: 'https://github.com/CarlosPerez93',
   memberSince: '2019',
@@ -37,6 +39,7 @@ export const profile: Profile = {
     { label: 'En GitHub desde', value: '2019' },
     { label: 'Repositorios públicos', value: '19' },
     { label: 'Especialidad', value: 'Front-end' },
+    { label: 'Experiencia', value: 'Desde 2020' },
   ],
   sources: [
     { platform: 'GitHub', label: '@CarlosPerez93', href: 'https://github.com/CarlosPerez93' },
