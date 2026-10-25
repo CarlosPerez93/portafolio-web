@@ -1,0 +1,53 @@
+/**
+ * Design tokens.
+ * Una sola fuente de verdad para color, tipografía, ritmo y movimiento.
+ * Ningún componente declara valores literales de color o familia tipográfica.
+ */
+
+:root {
+  /* Color */
+  --paper: #f4f0e7;
+  --paper-raised: #faf7f1;
+  --ink: #16130f;
+  --ink-soft: #4c463c;
+  --ink-faint: #867e70;
+  --line: #ded6c7;
+  --line-strong: #c3b9a6;
+  --accent: #b23a1b;
+  --accent-deep: #8d2c13;
+  --accent-soft: #f0ddce;
+  --grid-line: rgba(22, 19, 15, 0.035);
+
+  /* Inversión (secciones oscuras) */
+  --paper-on-ink: #efe9dc;
+  --ink-line: rgba(239, 233, 220, 0.16);
+
+  /* Tipografía */
+  --font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Escala fluida */
+  --step-meta: 0.6875rem;
+  --step-small: 0.875rem;
+  --step-body: 1rem;
+  --step-lead: clamp(1.0625rem, 1.4vw, 1.25rem);
+  --step-h3: clamp(1.25rem, 2vw, 1.625rem);
+  --step-h2: clamp(2rem, 4.2vw, 3.25rem);
+  --step-display: clamp(3.375rem, 11vw, 8rem);
+
+  /* Ritmo */
+  --shell: 1180px;
+  --gutter: clamp(1.25rem, 5vw, 4rem);
+  --section-y: clamp(4.5rem, 9vw, 8.5rem);
+  --header-h: 4.5rem;
+  --hairline: 1px;
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 180ms;
+  --dur-base: 420ms;
+  --dur-slow: 720ms;
+}
