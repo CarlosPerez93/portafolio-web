@@ -141,12 +141,27 @@ El repositorio no contiene claves, tokens ni `.env`. `.gitignore` excluye `.env`
 
 El sitio está publicado en Netlify: **https://carlos-perez-portafolio.netlify.app**
 
-La configuración vive en [`netlify.toml`](netlify.toml) y no depende de ajustes hechos a mano en el panel:
+El build lo define [`netlify.toml`](netlify.toml), que es la fuente de verdad del comando y del directorio publicado:
 
 - `npm run build` genera `dist/`, que es lo único que se sirve.
 - Node 22 en el entorno de build, la misma versión con la que se prueba en local.
 - Redirección `/*` → `/index.html` con estado 200, para que una recarga profunda no termine en un 404.
 - Cache indefinida para `/assets/*`, seguro porque Vite incluye un hash en el nombre de cada archivo.
+
+### Despliegue continuo desde `main`
+
+El sitio está enlazado al repositorio `CarlosPerez93/portafolio-web` a través de la GitHub App de Netlify (instalación `46140166`), rama `main` y solo esa rama:
+
+| Ajuste               | Valor                                   |
+| -------------------- | --------------------------------------- |
+| Repositorio          | `CarlosPerez93/portafolio-web`          |
+| Rama desplegada      | `main` (la única en `allowed_branches`) |
+| Comando de build     | `npm run build`                         |
+| Directorio publicado | `dist`                                  |
+
+De ahí se sigue el flujo normal: al hacer `git push origin main`, Netlify recibe el evento de la App, clona el commit y ejecuta el build. No hay webhook por repositorio ni credencial de GitHub guardada en el proyecto: la autorización es la de la App ya instalada en la cuenta, así que el despliegue no necesita ningún token compartido ni variable de entorno.
+
+El enlace se comprobó con una petición autenticada de la propia sesión del CLI de Netlify —sin crear ni pedir credenciales nuevas— y quedó registrado con `deploy_key_id` nulo, es decir, sin clave de despliegue que rotar.
 
 `public/` incluye `robots.txt` y `sitemap.xml` con la URL de producción; sin ellos, la redirección de la SPA devolvería HTML en rutas que los rastreadores esperan en texto plano.
 
