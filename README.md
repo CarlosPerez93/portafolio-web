@@ -8,15 +8,17 @@ SPA de portafolio construida con **React 19, TypeScript y CSS Modules**. Todo lo
 
 ## Qué hay aquí
 
-Una sola página con cinco secciones y un índice fijo:
+Una sola página con siete secciones y un índice fijo:
 
-| Sección          | Contenido                                               | Procedencia                                         |
-| ---------------- | ------------------------------------------------------- | --------------------------------------------------- |
-| 01 · Perfil      | Presentación, foco de trabajo y datos de cuenta         | GitHub + LinkedIn                                   |
-| 02 · Proyectos   | 4 destacados y 8 secundarios, con enlaces reales        | GitHub (repositorios y demos)                       |
-| 03 · Habilidades | Peso real de cada lenguaje en bytes + grupos de trabajo | API de lenguajes de GitHub                          |
-| 04 · Trayectoria | Seis etapas por año, de 2020 a 2026                     | Fechas de repositorios + copia de datos de LinkedIn |
-| 05 · Contacto    | Correo y perfiles                                       | LinkedIn + GitHub                                   |
+| Sección          | Contenido                                               | Procedencia                      |
+| ---------------- | ------------------------------------------------------- | -------------------------------- |
+| 01 · Perfil      | Presentación, foco de trabajo y datos de cuenta         | GitHub + LinkedIn                |
+| 02 · Proyectos   | 4 destacados y 8 secundarios, con enlaces reales        | GitHub (repositorios y demos)    |
+| 03 · Habilidades | Peso real de cada lenguaje en bytes + grupos de trabajo | API de lenguajes de GitHub       |
+| 04 · Experiencia | Cuatro puestos, de 2020 a 2026                          | Copia de datos de LinkedIn       |
+| 05 · Estudios    | Una titulación, un curso superior y formación abierta   | Copia de datos de LinkedIn       |
+| 06 · Trayectoria | Cinco etapas de código por año, de 2022 a 2026          | Fechas de repositorios en GitHub |
+| 07 · Contacto    | Correo y perfiles                                       | LinkedIn + GitHub                |
 
 ## Stack
 
@@ -55,7 +57,7 @@ src/
 ├── assets/images/          # avatar (única imagen del sitio)
 ├── components/
 │   ├── layout/             # Header, Footer, Section (marco de sección)
-│   ├── sections/           # Perfil, Proyectos, Habilidades, Trayectoria, Contacto
+│   ├── sections/           # Perfil, Proyectos, Habilidades, Experiencia, Estudios, Trayectoria, Contacto
 │   └── ui/                 # ArrowLink, Chip, LanguageBar, ProjectCard,
 │                           # Reveal, SectionMarker, SocialIcon, SocialLinks
 ├── data/                   # contenido como módulos de datos tipados
@@ -114,14 +116,16 @@ El movimiento es mínimo y con intención: un filete que se dibuja una sola vez 
 ## Procedencia de los datos
 
 - **GitHub** (`@CarlosPerez93`): repositorios, lenguajes, fechas de creación, estrellas y URLs de demo.
-- **LinkedIn** (`/in/carlos-perez93`): nombre, correo, ubicación, perfil profesional y las etapas de empleo y formación, tomadas de la copia de datos del perfil (puestos, empleadores, fechas y stack; titulaciones y cursos con sus fechas).
+- **LinkedIn** (`/in/carlos-perez93`): nombre, correo, ubicación, perfil profesional y el registro completo de empleo y formación, tomado de la copia de datos del perfil. Alimenta las secciones 04 (Experiencia: puestos, empleadores, fechas, lugar y stack) y 05 (Estudios: centros, titulaciones y fechas). No se incluye el teléfono móvil que figura en esa copia.
 - Habilidades: peso en bytes por lenguaje según la API de GitHub sobre 17 repositorios públicos con código (947.296 bytes clasificados). Quedan fuera este mismo sitio, que se mediría a sí mismo, y el repositorio de perfil.
-- Trayectoria: una etapa por año, de 2020 a 2026. Los hitos de código llevan la fecha de creación del repositorio en GitHub; las etapas profesionales y de formación llevan empleador o institución, cargo y fechas tal como constan en la copia de datos de LinkedIn. Cada línea declara de dónde sale.
+- Experiencia: los cuatro puestos de la copia de datos, en el orden del documento. El registro de la Universidad Surcolombiana no trae descripción y la ficha lo dice en lugar de rellenarla. Las fechas se reproducen tal cual: dos tramos se solapan con el puesto en la Universidad de La Amazonia (IVO Internacional entre marzo y noviembre de 2022; OnPlay entre diciembre de 2022 y enero de 2023) y no se corrigen.
+- Estudios: tres registros —la titulación en la Universidad de La Amazonia, el curso de Deusto Formación y la formación en midudev— con centro, denominación y fechas. La etiqueta de tipo se deduce de la propia denominación del título.
+- Trayectoria: una etapa por año, de 2022 a 2026, solo con hitos de código y la fecha de creación del repositorio en GitHub. Los puestos y la formación no se repiten aquí: tienen sección propia.
 
 Dos notas de honestidad que también aparecen en la propia página:
 
 1. Los porcentajes se redondean a un decimal de forma independiente, así que la columna puede no sumar exactamente 100 %.
-2. Las etapas de empleo aparecen con lo que consta en la copia de datos de LinkedIn —empleador, cargo, fechas, lugar y stack—, sin responsabilidades ni logros añadidos. Donde la copia no describe el puesto, la línea lo dice en lugar de rellenarlo. Las fechas se reproducen tal cual, aunque dos etapas se solapen.
+2. Las etapas de empleo y formación aparecen con lo que consta en la copia de datos de LinkedIn —empleador, cargo, fechas, lugar y stack—, sin responsabilidades ni logros añadidos. Donde la copia no describe el puesto, la ficha lo dice en lugar de rellenarlo. Las fechas se reproducen tal cual, aunque dos etapas se solapen.
 
 ## Secretos y credenciales
 
