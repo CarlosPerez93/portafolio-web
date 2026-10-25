@@ -16,8 +16,8 @@ export function Trayectoria({ entries, note }: TrayectoriaProps) {
       id="trayectoria"
       index="04"
       eyebrow="Trayectoria"
-      title="Del primer carrito al asistente"
-      lead="Solo hitos que constan en el historial público de GitHub, con la fecha que tienen en el repositorio."
+      title="Del primer empleo al asistente"
+      lead="Hitos fechados: los repositorios constan en el historial público de GitHub y las etapas profesionales y de formación, en la copia de datos de LinkedIn."
     >
       <ol role="list" className={styles.timeline}>
         {entries.map((entry, position) => (
