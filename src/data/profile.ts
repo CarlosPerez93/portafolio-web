@@ -1,4 +1,4 @@
-import avatarUrl from '../assets/images/avatar.jpg'
+﻿import avatarUrl from '../assets/images/avatar.jpg'
 import type { Profile } from '../types'
 
 /**
@@ -16,7 +16,7 @@ export const profile: Profile = {
     'Construyo interfaces web con criterio de ingeniería: tipografía que se lee, estados que se entienden y código que se puede mantener.',
   bio: [
     'Trabajo en el punto donde el diseño se encuentra con el código. Me interesan las interfaces que se leen con claridad, se recorren con el teclado y siguen siendo comprensibles cuando el proyecto crece.',
-    'En GitHub desde 2019, con 17 repositorios públicos: desde un carrito de la compra con Context y localStorage hasta un asistente de escritorio en Python que conversa con Gemini y ejecuta herramientas del sistema.',
+    'En GitHub desde 2019, con 19 repositorios públicos: desde un carrito de la compra con Context y localStorage hasta un asistente de escritorio en Python que conversa con Gemini y ejecuta herramientas del sistema.',
   ],
   focus: [
     'Interfaces en React y TypeScript',
@@ -30,12 +30,12 @@ export const profile: Profile = {
   githubHandle: 'CarlosPerez93',
   githubUrl: 'https://github.com/CarlosPerez93',
   memberSince: '2019',
-  publicRepos: 17,
+  publicRepos: 19,
   linkedinHandle: 'carlos-perez93',
   linkedinUrl: 'https://www.linkedin.com/in/carlos-perez93',
   facts: [
     { label: 'En GitHub desde', value: '2019' },
-    { label: 'Repositorios públicos', value: '17' },
+    { label: 'Repositorios públicos', value: '19' },
     { label: 'Especialidad', value: 'Front-end' },
   ],
   sources: [

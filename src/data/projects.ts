@@ -1,8 +1,8 @@
-import type { Project } from '../types'
+﻿import type { Project } from '../types'
 
 /**
  * Proyectos tomados de los repositorios públicos del perfil, más LUMIKO,
- * que el autor indicó destacar y cuyo repositorio es privado.
+ * que el autor indicó destacar y que ahora también publica su código.
  *
  * Cada descripción se apoya en el README, la descripción del repositorio o su
  * árbol de archivos. No se atribuyen funcionalidades no documentadas.
@@ -54,11 +54,14 @@ export const projects: readonly Project[] = [
     title: 'LUMIKO',
     tagline: 'Tienda de objetos domotizados',
     description:
-      'Tienda de juguetes domotizados y lámparas inteligentes de temática anime, con catálogo, fichas de producto y una identidad visual propia. Proyecto privado: el código no es público, pero el trabajo está activo.',
+      'Tienda de juguetes domotizados y lámparas inteligentes de temática anime, con catálogo, fichas de producto y una identidad visual propia. El código está publicado y el sitio se despliega desde el repositorio.',
     stack: ['Angular', 'TypeScript', 'Tailwind CSS'],
-    links: [],
+    links: [
+      { label: 'Demo', href: 'https://lumiko.com', kind: 'demo' },
+      { label: 'Código', href: 'https://github.com/CarlosPerez93/lumiko-store', kind: 'repo' },
+    ],
     featured: true,
-    signal: 'Repositorio privado · actualizado en octubre de 2026',
+    signal: 'Repositorio público · lumiko.com',
   },
   {
     id: 'rick-and-morty',

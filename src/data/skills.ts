@@ -5,26 +5,26 @@ import { formatNumber } from '../utils'
  * Habilidades medidas, no declaradas.
  *
  * Los porcentajes salen del peso en bytes que GitHub atribuye a cada lenguaje
- * en los 17 repositorios públicos del perfil. Es una foto del código escrito,
- * no una escala de dominio: por eso el informe declara cuántos bytes se
- * analizaron y qué queda fuera del desglose.
+ * en los repositorios públicos con código del perfil. Es una foto del código
+ * escrito, no una escala de dominio: por eso el informe declara cuántos bytes
+ * se analizaron y qué queda fuera del desglose.
  */
 export const skillReport: SkillReport = {
   repositoryCount: 17,
-  analysedBytes: 638_982,
+  analysedBytes: 947_296,
   capturedAt: 'octubre de 2026',
   languages: [
-    { name: 'TypeScript', bytes: 340_829, percent: 53.34, highlight: true },
-    { name: 'CSS', bytes: 123_046, percent: 19.26, highlight: false },
-    { name: 'JavaScript', bytes: 70_706, percent: 11.07, highlight: false },
-    { name: 'HTML', bytes: 33_297, percent: 5.21, highlight: false },
-    { name: 'SCSS', bytes: 17_930, percent: 2.81, highlight: false },
-    { name: 'Java', bytes: 15_616, percent: 2.44, highlight: false },
-    { name: 'Python', bytes: 13_481, percent: 2.11, highlight: false },
-    { name: 'C++', bytes: 7_295, percent: 1.14, highlight: false },
-    { name: 'C#', bytes: 6_644, percent: 1.04, highlight: false },
+    { name: 'TypeScript', bytes: 476_493, percent: 50.3, highlight: true },
+    { name: 'HTML', bytes: 134_550, percent: 14.2, highlight: false },
+    { name: 'CSS', bytes: 132_886, percent: 14.03, highlight: false },
+    { name: 'JavaScript', bytes: 132_263, percent: 13.96, highlight: false },
+    { name: 'SCSS', bytes: 17_930, percent: 1.89, highlight: false },
+    { name: 'Java', bytes: 15_616, percent: 1.65, highlight: false },
+    { name: 'Python', bytes: 13_481, percent: 1.42, highlight: false },
+    { name: 'C++', bytes: 7_295, percent: 0.77, highlight: false },
+    { name: 'C#', bytes: 6_644, percent: 0.7, highlight: false },
   ],
-  remainder: { label: 'Objective-C++, Ruby, Shell, Starlark y otros', percent: 1.59 },
+  remainder: { label: 'Objective-C++, Objective-C, Ruby, Shell, Starlark y CMake', percent: 1.07 },
   groups: [
     {
       id: 'interfaces',
@@ -61,7 +61,7 @@ export const skillReport: SkillReport = {
 }
 
 /** Frase de método que acompaña al informe en la sección de habilidades. */
-export const skillsMethod = `Los porcentajes no son una autoevaluación: son el peso real de cada lenguaje en los ${skillReport.repositoryCount} repositorios públicos, sobre ${formatNumber(skillReport.analysedBytes)} bytes de código que GitHub clasifica.`
+export const skillsMethod = `Los porcentajes no son una autoevaluación: son el peso real de cada lenguaje en ${skillReport.repositoryCount} repositorios públicos, sobre ${formatNumber(skillReport.analysedBytes)} bytes de código que GitHub clasifica. De los 19 repositorios públicos quedan fuera este mismo sitio, que se mediría a sí mismo, y el repositorio de perfil, que no contiene código.`
 
 /**
  * Aviso de precisión.

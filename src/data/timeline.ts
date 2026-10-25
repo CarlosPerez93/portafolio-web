@@ -58,11 +58,11 @@ export const timeline: readonly TimelineEntry[] = [
     year: '2026',
     title: 'Del navegador al escritorio',
     description:
-      'El año más ancho: un asistente de voz en Python, un explorador de GraphQL en Angular y una tienda privada con identidad propia.',
+      'El año más ancho: un asistente de voz en Python, un explorador de GraphQL en Angular y una tienda con identidad propia y el código a la vista.',
     items: [
       'Jarvis 2.0: asistente de escritorio con Gemini, voz y function calling',
       'Multiverse Explorer: Angular 16, Apollo y renderizado en servidor',
-      'LUMIKO: tienda de objetos domotizados, repositorio privado',
+      'LUMIKO: tienda de objetos domotizados, repositorio público',
     ],
   },
 ]

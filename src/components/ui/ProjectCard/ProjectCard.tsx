@@ -8,8 +8,8 @@ import type { ProjectCardProps } from './ProjectCard.types'
  * Tarjeta de proyecto.
  *
  * Una sola pieza resuelve el bloque destacado y la ficha compacta: la variante
- * cambia la escala tipográfica, no la estructura ni la información. Sin enlaces
- * la tarjeta sigue siendo legible, que es el caso de LUMIKO (repositorio privado).
+ * cambia la escala tipográfica, no la estructura ni la información. Si un
+ * proyecto no trae enlaces, el bloque se omite y la tarjeta sigue siendo legible.
  */
 export function ProjectCard({ project, variant = 'feature', index }: ProjectCardProps) {
   return (
