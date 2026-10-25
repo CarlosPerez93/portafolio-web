@@ -1,6 +1,8 @@
-# Portafolio web — Carlos Pérez
+﻿# Portafolio web — Carlos Pérez
 
 SPA de portafolio construida con **React 19, TypeScript y CSS Modules**. Todo lo que aparece en la página proviene de dos fuentes verificables: la API pública de GitHub y la identidad de LinkedIn. No hay datos de relleno.
+
+**Sitio publicado:** https://carlos-perez-portafolio.netlify.app
 
 ---
 
@@ -113,7 +115,7 @@ El movimiento es mínimo y con intención: un filete que se dibuja una sola vez 
 
 - **GitHub** (`@CarlosPerez93`): repositorios, lenguajes, fechas de creación, estrellas y URLs de demo.
 - **LinkedIn** (`/in/carlos-perez93`): nombre, correo e identidad del perfil.
-- Habilidades: peso en bytes por lenguaje según la API de GitHub sobre 17 repositorios públicos (638.982 bytes clasificados).
+- Habilidades: peso en bytes por lenguaje según la API de GitHub sobre 17 repositorios públicos con código (947.296 bytes clasificados). Quedan fuera este mismo sitio, que se mediría a sí mismo, y el repositorio de perfil.
 - Trayectoria: los hitos se derivan de fechas de creación de repositorios.
 
 Dos notas de honestidad que también aparecen en la propia página:
@@ -129,8 +131,17 @@ El repositorio no contiene claves, tokens ni `.env`. `.gitignore` excluye `.env`
 
 `index.html` declara `og:type`, `og:title`, `og:description`, `og:locale`, `og:url` y `og:image` (1200×630, en `public/og-image.jpg`), más `twitter:card`.
 
-`og:url` y `og:image` son **absolutas** porque los rastreadores sociales no resuelven rutas relativas. Hoy apuntan al repositorio; al publicar el sitio en un dominio propio, cambia `og:image` por la URL del dominio.
+`og:url` y `og:image` son **absolutas** porque los rastreadores sociales no resuelven rutas relativas. Apuntan al dominio de producción (`https://carlos-perez-portafolio.netlify.app`); si el sitio cambia de dominio, hay que actualizar ambas a la vez.
 
 ## Despliegue
 
-El build es estático (`dist/`), así que sirve en cualquier host de ficheros estáticos. Para Netlify o Vercel: comando `npm run build`, directorio de publicación `dist`.
+El sitio está publicado en Netlify: **https://carlos-perez-portafolio.netlify.app**
+
+La configuración vive en [`netlify.toml`](netlify.toml) y no depende de ajustes hechos a mano en el panel:
+
+- `npm run build` genera `dist/`, que es lo único que se sirve.
+- Node 22 en el entorno de build, la misma versión con la que se prueba en local.
+- Redirección `/*` → `/index.html` con estado 200, para que una recarga profunda no termine en un 404.
+- Cache indefinida para `/assets/*`, seguro porque Vite incluye un hash en el nombre de cada archivo.
+
+Como el build es estático, el mismo `dist/` sirve en cualquier otro host: comando `npm run build`, directorio de publicación `dist`.

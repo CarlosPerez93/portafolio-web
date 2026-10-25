@@ -1,4 +1,4 @@
-# Dependencias
+﻿# Dependencias
 node_modules/
 
 # Build
@@ -27,3 +27,6 @@ pnpm-debug.log*
 
 # Caché de TypeScript
 *.tsbuildinfo
+
+# Estado local de Netlify (vinculación del proyecto, no del repositorio)
+.netlify/

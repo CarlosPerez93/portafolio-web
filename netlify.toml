@@ -1,0 +1,25 @@
+# Configuración de despliegue.
+#
+# El build es el mismo que se ejecuta en local (`npm run build`) y publica
+# únicamente `dist`: el código fuente no se sirve. La redirección de la SPA
+# devuelve el índice con estado 200 en cualquier ruta, de modo que una recarga
+# profunda no acabe en un 404 de Netlify.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Vite añade un hash al nombre de cada archivo: si el contenido cambia, cambia
+# la URL, así que se pueden cachear de forma indefinida.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
