@@ -43,6 +43,7 @@ export const projects: readonly Project[] = [
       'Aplicación de una sola página con React, TypeScript y Vite. Cada componente vive en su propia carpeta con estilos, tipos e índice, una estructura que después repetí en otros proyectos. El despliegue se resuelve con Netlify.',
     stack: ['React', 'TypeScript', 'Vite', 'pnpm'],
     links: [
+      { label: 'Demo', href: 'https://pokemon-web-app-v1.netlify.app', kind: 'demo' },
       { label: 'Código', href: 'https://github.com/CarlosPerez93/pokemon-web', kind: 'repo' },
     ],
     featured: true,
@@ -57,7 +58,7 @@ export const projects: readonly Project[] = [
       'Tienda de juguetes domotizados y lámparas inteligentes de temática anime, con catálogo, fichas de producto y una identidad visual propia. El código está publicado y el sitio se despliega desde el repositorio.',
     stack: ['Angular', 'TypeScript', 'Tailwind CSS'],
     links: [
-      { label: 'Demo', href: 'https://lumiko.com', kind: 'demo' },
+      { label: 'Demo', href: 'https://lumiko-store.netlify.app', kind: 'demo' },
       { label: 'Código', href: 'https://github.com/CarlosPerez93/lumiko-store', kind: 'repo' },
     ],
     featured: true,
