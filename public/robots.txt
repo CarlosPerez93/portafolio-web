@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carlos-perez-portafolio.netlify.app/sitemap.xml

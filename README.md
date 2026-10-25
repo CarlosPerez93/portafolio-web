@@ -144,4 +144,6 @@ La configuración vive en [`netlify.toml`](netlify.toml) y no depende de ajustes
 - Redirección `/*` → `/index.html` con estado 200, para que una recarga profunda no termine en un 404.
 - Cache indefinida para `/assets/*`, seguro porque Vite incluye un hash en el nombre de cada archivo.
 
+`public/` incluye `robots.txt` y `sitemap.xml` con la URL de producción; sin ellos, la redirección de la SPA devolvería HTML en rutas que los rastreadores esperan en texto plano.
+
 Como el build es estático, el mismo `dist/` sirve en cualquier otro host: comando `npm run build`, directorio de publicación `dist`.
