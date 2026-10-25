@@ -40,7 +40,7 @@ export const projects: readonly Project[] = [
     title: 'Pokémon Web',
     tagline: 'SPA de exploración, componente a componente',
     description:
-      'Aplicación de una sola página con React, TypeScript y Vite. Cada componente vive en su propia carpeta con estilos, tipos e índice, una estructura que después repetí en otros proyectos. El despliegue se resuelve con Netlify.',
+      'Aplicación de una sola página  React, TypeScript y Vite. Cada componente vive en su propia carpeta con estilos, tipos e índice, una estructura que después repetí en otros proyectos. El despliegue se resuelve con Netlify.',
     stack: ['React', 'TypeScript', 'Vite', 'pnpm'],
     links: [
       { label: 'Demo', href: 'https://pokemon-web-app-v1.netlify.app', kind: 'demo' },
