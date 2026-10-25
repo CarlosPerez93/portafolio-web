@@ -1,0 +1,17 @@
+.chip {
+  display: inline-block;
+  padding: 0.2rem 0.45rem;
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  border: var(--hairline) solid var(--line);
+  background-color: transparent;
+}
+
+.subtle {
+  color: var(--ink-faint);
+  border-color: transparent;
+  padding-inline: 0;
+}

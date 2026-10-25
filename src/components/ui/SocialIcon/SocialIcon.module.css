@@ -1,0 +1,7 @@
+.icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+  color: currentColor;
+  transition: transform var(--dur-base) var(--ease-out);
+}

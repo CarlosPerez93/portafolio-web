@@ -1,0 +1,28 @@
+.marker {
+  /* Ocupa la fila completa cuando vive dentro de una rejilla de encabezado. */
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.index {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.12em;
+  color: var(--accent);
+}
+
+.rule {
+  width: 1.75rem;
+  height: 1px;
+  background-color: var(--line-strong);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}

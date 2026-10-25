@@ -1,0 +1,69 @@
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: baseline;
+  gap: 0 1rem;
+  padding-block: 0.6rem;
+  border-top: var(--hairline) solid var(--line);
+}
+
+.name {
+  font-family: var(--font-mono);
+  font-size: var(--step-small);
+  color: var(--ink);
+}
+
+.bytes {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  color: var(--ink-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.percent {
+  min-width: 4.25rem;
+  font-family: var(--font-mono);
+  font-size: var(--step-small);
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.track {
+  grid-column: 1 / -1;
+  display: block;
+  height: 3px;
+  margin-top: 0.55rem;
+  background-color: var(--line);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--ink-faint);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 820ms var(--ease-out) var(--bar-delay, 0ms);
+}
+
+.drawn .fill {
+  transform: scaleX(var(--value));
+}
+
+.highlight .name,
+.highlight .percent {
+  color: var(--accent-deep);
+}
+
+.highlight .fill {
+  background-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fill {
+    transform: scaleX(var(--value));
+    transition: none;
+  }
+}
