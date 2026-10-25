@@ -1,0 +1,246 @@
+.hero {
+  padding-block: clamp(2.25rem, 6vw, 4rem) var(--section-y);
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.masthead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(8.5rem, 17vw, 13.5rem);
+  gap: clamp(1.75rem, 5vw, 4.5rem);
+  align-items: start;
+  margin-top: clamp(1.25rem, 3.5vw, 2.25rem);
+}
+
+.intro {
+  min-width: 0;
+}
+
+.role {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.dot {
+  margin-inline: 0.45rem;
+  color: var(--accent);
+}
+
+/* El nombre es el único elemento a escala de portada. */
+.name {
+  margin-top: 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 11.5vw, 8.25rem);
+  font-weight: 400;
+  line-height: 0.86;
+  letter-spacing: -0.045em;
+  font-variation-settings:
+    'SOFT' 0,
+    'WONK' 1;
+}
+
+.name span {
+  display: block;
+}
+
+.family {
+  padding-left: 0.04em;
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* Filete que se traza una sola vez al cargar: el gesto de la página, sin ruido. */
+.rule {
+  display: block;
+  width: clamp(3rem, 9vw, 7rem);
+  height: 2px;
+  margin-top: clamp(1.1rem, 2.5vw, 1.7rem);
+  background-color: var(--ink);
+  transform-origin: left center;
+  animation: draw-rule 900ms var(--ease-out) 220ms both;
+}
+
+@keyframes draw-rule {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.headline {
+  margin-top: clamp(1.1rem, 2.5vw, 1.6rem);
+  max-width: 44ch;
+  font-family: var(--font-display);
+  font-size: clamp(1.1875rem, 2.1vw, 1.625rem);
+  font-weight: 300;
+  line-height: 1.36;
+  letter-spacing: -0.01em;
+  color: var(--ink-soft);
+}
+
+/* --- Retrato ------------------------------------------------------------ */
+
+.portraitCell {
+  align-self: start;
+}
+
+.portrait {
+  position: relative;
+}
+
+/* Marca de registro: el mismo cuadrado que el icono de la cabecera. */
+.portrait::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent);
+}
+
+.frame {
+  overflow: hidden;
+  border: var(--hairline) solid var(--line-strong);
+  background-color: var(--paper-raised);
+}
+
+.frame img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: grayscale(0.22) contrast(1.03);
+  transition:
+    filter var(--dur-slow) var(--ease-out),
+    transform 1.2s var(--ease-out);
+}
+
+.frame:hover img {
+  filter: none;
+  transform: scale(1.02);
+}
+
+.caption {
+  margin-top: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+/* --- Cuerpo ------------------------------------------------------------- */
+
+.lower {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(2rem, 6vw, 4.5rem);
+  margin-top: clamp(2.25rem, 5.5vw, 3.75rem);
+  padding-top: clamp(1.35rem, 3vw, 2rem);
+  border-top: var(--hairline) solid var(--line);
+}
+
+.bio p {
+  max-width: 56ch;
+  font-size: var(--step-body);
+  line-height: 1.68;
+  color: var(--ink-soft);
+}
+
+.bio p:first-child {
+  font-size: var(--step-lead);
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.bio p + p {
+  margin-top: 0.9rem;
+}
+
+.focus {
+  margin-top: clamp(1.5rem, 3.5vw, 2.25rem);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.5rem;
+}
+
+.focusList li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+  border-top: var(--hairline) solid var(--line);
+  font-size: var(--step-small);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.focusIndex {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  padding-top: 0.15rem;
+}
+
+/* --- Datos y perfiles --------------------------------------------------- */
+
+.fact {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.55rem;
+  border-bottom: var(--hairline) solid var(--line);
+}
+
+.fact dt {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.fact dd {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+}
+
+.socials {
+  margin-top: 1.35rem;
+}
+
+@media (max-width: 900px) {
+  .masthead {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .portraitCell {
+    max-width: 11rem;
+  }
+
+  .lower {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

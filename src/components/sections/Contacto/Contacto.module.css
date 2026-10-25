@@ -1,0 +1,124 @@
+/*
+ * Contacto.
+ * La dirección de correo es el titular de la sección: un solo enlace, grande,
+ * con la flecha como remate. Todo lo demás es contexto.
+ */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(2.25rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--step-meta);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* --- Acción principal ----------------------------------------------------- */
+
+.mail {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4em;
+  margin-top: 0.6rem;
+  padding-bottom: 0.12em;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4.2vw, 2.75rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% var(--hairline);
+  transition:
+    background-size var(--dur-base) var(--ease-out),
+    color var(--dur-fast) var(--ease);
+  word-break: break-word;
+}
+
+/* La dirección se parte si no cabe; el subrayado acompaña al bloque. */
+.mailText {
+  display: inline;
+}
+
+.mailArrow {
+  flex: none;
+  width: 0.62em;
+  height: 0.62em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: square;
+  transform: translate(0, 0.02em);
+  transition:
+    transform var(--dur-base) var(--ease-out),
+    color var(--dur-fast) var(--ease);
+}
+
+.mail:hover,
+.mail:focus-visible {
+  color: var(--accent-deep);
+  background-size: 100% var(--hairline);
+}
+
+.mail:hover .mailArrow,
+.mail:focus-visible .mailArrow {
+  transform: translate(0.18em, -0.18em);
+}
+
+/* Objetivo de pulsación cómodo en pantallas táctiles. */
+.mail:focus-visible {
+  outline-offset: 6px;
+}
+
+.note {
+  max-width: 46ch;
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+  font-size: var(--step-small);
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+/* --- Perfiles ------------------------------------------------------------- */
+
+.secondary {
+  padding-top: 0.85rem;
+  border-top: var(--hairline) solid var(--line-strong);
+}
+
+.socials {
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(2rem, 6vw, 2.75rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .mail {
+    font-size: clamp(1.25rem, 6.2vw, 1.75rem);
+    letter-spacing: -0.015em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mail,
+  .mailArrow {
+    transition: none;
+  }
+
+  .mail:hover .mailArrow,
+  .mail:focus-visible .mailArrow {
+    transform: none;
+  }
+}
