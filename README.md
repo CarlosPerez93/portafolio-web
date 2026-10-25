@@ -1,6 +1,6 @@
 ﻿# Portafolio web — Carlos Pérez
 
-SPA de portafolio construida con **React 19, TypeScript y CSS Modules**. Todo lo que aparece en la página proviene de dos fuentes verificables: la API pública de GitHub y la identidad de LinkedIn. No hay datos de relleno.
+SPA de portafolio construida con **React 19, TypeScript y CSS Modules**. Todo lo que aparece en la página proviene de dos fuentes verificables: la API pública de GitHub y la copia de datos del perfil de LinkedIn. No hay datos de relleno.
 
 **Sitio publicado:** https://carlos-perez-portafolio.netlify.app
 
@@ -10,13 +10,13 @@ SPA de portafolio construida con **React 19, TypeScript y CSS Modules**. Todo lo
 
 Una sola página con cinco secciones y un índice fijo:
 
-| Sección          | Contenido                                               | Procedencia                        |
-| ---------------- | ------------------------------------------------------- | ---------------------------------- |
-| 01 · Perfil      | Presentación, foco de trabajo y datos de cuenta         | GitHub + LinkedIn                  |
-| 02 · Proyectos   | 4 destacados y 8 secundarios, con enlaces reales        | GitHub (repositorios y demos)      |
-| 03 · Habilidades | Peso real de cada lenguaje en bytes + grupos de trabajo | API de lenguajes de GitHub         |
-| 04 · Trayectoria | Cinco hitos por año                                     | Fechas de creación de repositorios |
-| 05 · Contacto    | Correo y perfiles                                       | LinkedIn + GitHub                  |
+| Sección          | Contenido                                               | Procedencia                                         |
+| ---------------- | ------------------------------------------------------- | --------------------------------------------------- |
+| 01 · Perfil      | Presentación, foco de trabajo y datos de cuenta         | GitHub + LinkedIn                                   |
+| 02 · Proyectos   | 4 destacados y 8 secundarios, con enlaces reales        | GitHub (repositorios y demos)                       |
+| 03 · Habilidades | Peso real de cada lenguaje en bytes + grupos de trabajo | API de lenguajes de GitHub                          |
+| 04 · Trayectoria | Seis etapas por año, de 2020 a 2026                     | Fechas de repositorios + copia de datos de LinkedIn |
+| 05 · Contacto    | Correo y perfiles                                       | LinkedIn + GitHub                                   |
 
 ## Stack
 
@@ -114,14 +114,14 @@ El movimiento es mínimo y con intención: un filete que se dibuja una sola vez 
 ## Procedencia de los datos
 
 - **GitHub** (`@CarlosPerez93`): repositorios, lenguajes, fechas de creación, estrellas y URLs de demo.
-- **LinkedIn** (`/in/carlos-perez93`): nombre, correo e identidad del perfil.
+- **LinkedIn** (`/in/carlos-perez93`): nombre, correo, ubicación, perfil profesional y las etapas de empleo y formación, tomadas de la copia de datos del perfil (puestos, empleadores, fechas y stack; titulaciones y cursos con sus fechas).
 - Habilidades: peso en bytes por lenguaje según la API de GitHub sobre 17 repositorios públicos con código (947.296 bytes clasificados). Quedan fuera este mismo sitio, que se mediría a sí mismo, y el repositorio de perfil.
-- Trayectoria: los hitos se derivan de fechas de creación de repositorios.
+- Trayectoria: una etapa por año, de 2020 a 2026. Los hitos de código llevan la fecha de creación del repositorio en GitHub; las etapas profesionales y de formación llevan empleador o institución, cargo y fechas tal como constan en la copia de datos de LinkedIn. Cada línea declara de dónde sale.
 
 Dos notas de honestidad que también aparecen en la propia página:
 
 1. Los porcentajes se redondean a un decimal de forma independiente, así que la columna puede no sumar exactamente 100 %.
-2. La trayectoria no incluye empleos ni formación: no fueron aportados ni constan en los perfiles consultados. Se prefirió un hueco visible a un dato inventado.
+2. Las etapas de empleo aparecen con lo que consta en la copia de datos de LinkedIn —empleador, cargo, fechas, lugar y stack—, sin responsabilidades ni logros añadidos. Donde la copia no describe el puesto, la línea lo dice en lugar de rellenarlo. Las fechas se reproducen tal cual, aunque dos etapas se solapen.
 
 ## Secretos y credenciales
 
