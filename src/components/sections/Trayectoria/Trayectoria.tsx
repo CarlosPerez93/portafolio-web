@@ -14,10 +14,10 @@ export function Trayectoria({ entries, note }: TrayectoriaProps) {
   return (
     <Section
       id="trayectoria"
-      index="04"
+      index="06"
       eyebrow="Trayectoria"
-      title="Del primer empleo al asistente"
-      lead="Hitos fechados: los repositorios constan en el historial público de GitHub y las etapas profesionales y de formación, en la copia de datos de LinkedIn."
+      title="Del primer repositorio al asistente"
+      lead="Hitos fechados del código, tomados del historial público de GitHub. Los puestos y la formación tienen sección propia, así que no se repiten aquí."
     >
       <ol role="list" className={styles.timeline}>
         {entries.map((entry, position) => (

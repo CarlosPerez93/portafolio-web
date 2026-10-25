@@ -15,7 +15,7 @@ export function Contacto({ profile, socials }: ContactoProps) {
   return (
     <Section
       id="contacto"
-      index="05"
+      index="07"
       eyebrow="Contacto"
       title="Hablemos"
       lead="Un correo basta para empezar. Los perfiles están ahí para revisar el contexto de cada proyecto antes de escribir."

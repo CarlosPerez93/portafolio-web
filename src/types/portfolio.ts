@@ -10,6 +10,8 @@ export const SECTION_IDS = [
   'perfil',
   'proyectos',
   'habilidades',
+  'experiencia',
+  'estudios',
   'trayectoria',
   'contacto',
 ] as const
@@ -108,6 +110,31 @@ export interface SkillReport {
   readonly languages: readonly LanguageStat[]
   readonly remainder: { readonly label: string; readonly percent: number }
   readonly groups: readonly SkillGroup[]
+}
+
+/** Etapa profesional tal como consta en la copia exportada del perfil. */
+export interface ExperienceEntry {
+  readonly company: string
+  readonly role: string
+  readonly period: string
+  /** Duración que acompaña al registro; `null` si la copia no la incluye. */
+  readonly duration: string | null
+  readonly location: string | null
+  /** Descripción literal del registro; `null` cuando no hay descripción. */
+  readonly summary: string | null
+  readonly stack: readonly string[]
+}
+
+export type EducationKind = 'Titulación' | 'Curso superior' | 'Formación'
+
+/** Estudio o curso tal como consta en la copia exportada del perfil. */
+export interface EducationEntry {
+  readonly institution: string
+  readonly qualification: string
+  /** Segunda línea del registro (campo de estudio); `null` si no la trae. */
+  readonly field: string | null
+  readonly kind: EducationKind
+  readonly period: string
 }
 
 export interface TimelineEntry {

@@ -1,10 +1,14 @@
 import { Footer } from './components/layout/Footer'
 import { Header } from './components/layout/Header'
 import { Contacto } from './components/sections/Contacto'
+import { Estudios } from './components/sections/Estudios'
+import { Experiencia } from './components/sections/Experiencia'
 import { Habilidades } from './components/sections/Habilidades'
 import { Perfil } from './components/sections/Perfil'
 import { Proyectos } from './components/sections/Proyectos'
 import { Trayectoria } from './components/sections/Trayectoria'
+import { education, educationNote } from './data/education'
+import { experience, experienceNote } from './data/experience'
 import { navigation } from './data/navigation'
 import { profile } from './data/profile'
 import { featuredProjects, secondaryProjects } from './data/projects'
@@ -44,6 +48,10 @@ function App() {
           caveat={skillsCaveat}
           roundingNote={skillsRoundingNote}
         />
+
+        <Experiencia entries={experience} note={experienceNote} />
+
+        <Estudios entries={education} note={educationNote} />
 
         <Trayectoria entries={timeline} note={timelineNote} />
 

@@ -132,11 +132,15 @@
   opacity: 0.75;
 }
 
-@media (max-width: 720px) {
+/* Siete secciones: el apellido profesional del logotipo cede antes que los
+   rótulos del índice, que son los que orientan la lectura. */
+@media (max-width: 1100px) {
   .role {
     display: none;
   }
+}
 
+@media (max-width: 940px) {
   /* Con el texto oculto, el número es la única pista visual: el objetivo de
      pulsación crece para no quedar por debajo del mínimo táctil. */
   .label {

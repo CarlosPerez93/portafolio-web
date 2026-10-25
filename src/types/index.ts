@@ -1,5 +1,8 @@
 export { SECTION_IDS } from './portfolio'
 export type {
+  EducationEntry,
+  EducationKind,
+  ExperienceEntry,
   LanguageStat,
   NavItem,
   Profile,
