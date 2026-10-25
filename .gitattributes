@@ -1,0 +1,10 @@
+# Normaliza los finales de línea: LF en el repositorio y en el working copy,
+# para que `prettier --check` (endOfLine: lf) dé el mismo resultado en cualquier SO.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.woff binary
+*.woff2 binary
