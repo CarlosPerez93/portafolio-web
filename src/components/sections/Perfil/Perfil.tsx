@@ -40,23 +40,6 @@ export function Perfil({ profile, socials }: PerfilProps) {
 
             <p className={styles.headline}>{profile.headline}</p>
           </div>
-
-          <Reveal delay={160} className={styles.portraitCell}>
-            <figure className={styles.portrait}>
-              <div className={styles.frame}>
-                <img
-                  src={profile.avatar}
-                  alt={`Retrato de ${profile.name}`}
-                  width={320}
-                  height={320}
-                  decoding="async"
-                />
-              </div>
-              <figcaption className={styles.caption}>
-                Retrato tomado del perfil de GitHub · @{profile.githubHandle}
-              </figcaption>
-            </figure>
-          </Reveal>
         </div>
 
         <div className={styles.lower}>

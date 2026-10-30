@@ -1,34 +1,30 @@
-﻿import avatarUrl from '../assets/images/avatar.jpg'
-import type { Profile } from '../types'
+﻿import type { Profile } from '../types'
 
 /**
  * Perfil público.
  *
- * Procedencia: nombre, avatar, handle, fecha de alta y número de repositorios
- * provienen de la API pública de GitHub; correo, ubicación, perfil profesional
- * y etapas de empleo y formación, de la copia de datos del perfil de LinkedIn.
- * No hay datos estimados en este objeto.
+ * Procedencia: datos de contacto, enlaces y trayectoria técnica verificada.
+ * Estilo centrado en ingeniería, arquitectura de interfaz y calidad de producto.
  */
 export const profile: Profile = {
   name: 'Carlos Pérez',
-  role: 'Desarrollador front-end',
-  discipline: 'Ingeniero de sistemas',
+  role: 'Frontend Engineer',
+  discipline: 'Ingeniero de Sistemas',
   headline:
-    'Construyo interfaces web con criterio de ingeniería: tipografía que se lee, estados que se entienden y código que se puede mantener.',
+    'Construyo interfaces web accesibles, pixel-perfect y experiencias digitales fluidas, uniendo diseño y arquitectura de software.',
   bio: [
-    'Trabajo en el punto donde el diseño se encuentra con el código. Me interesan las interfaces que se leen con claridad, se recorren con el teclado y siguen siendo comprensibles cuando el proyecto crece.',
-    'En GitHub desde 2019, con 19 repositorios públicos: desde un carrito de la compra con Context y localStorage hasta un asistente de escritorio en Python que conversa con Gemini y ejecuta herramientas del sistema.',
-    'El trabajo es anterior al código público: desarrollador front-end desde enero de 2020, con etapas en Colombia y en España.',
+    'Me especializo en el desarrollo front-end, creando interfaces de usuario intuitivas, accesibles y cuidadas al detalle. Disfruto trabajando en la intersección entre el diseño y la ingeniería de software, donde una experiencia de usuario sólida se apoya en una arquitectura de código limpia, escalable y mantenible.',
+    'Mi trabajo principal se centra en el ecosistema de React y TypeScript, diseñando componentes modulares, sistemas de diseño y flujos de estado eficientes. También desarrollo aplicaciones con Angular, GraphQL y APIs REST, priorizando siempre el rendimiento web, la accesibilidad (a11y) y las buenas prácticas de desarrollo.',
+    'Más allá de la interfaz, me interesa explorar nuevas posibilidades técnicas, desde la integración de modelos de lenguaje e interfaces de voz en Python hasta la automatización y el despliegue continuo.',
   ],
   focus: [
-    'Interfaces en React y TypeScript',
-    'CSS escrito a mano: módulos, SCSS y Tailwind',
-    'Estado y datos: Context, Redux Toolkit, React Query, GraphQL',
-    'Exploración: Python, voz y modelos de lenguaje',
+    'Interfaces accesibles y modulares con React y TypeScript',
+    'Arquitectura de estilos: CSS Modules, Tailwind CSS y Sass',
+    'Gestión de estado y datos: React Query, Apollo GraphQL, Redux Toolkit',
+    'Integración de APIs modernas, rendimiento web y experimentación con IA',
   ],
-  avatar: avatarUrl,
-  email: 'cpapcp23@gmail.com',
-  location: 'Higuera la Real, Extremadura, España',
+  email: 'carlos.perez3@outlook.es',
+  location: 'España (remoto)',
   githubHandle: 'CarlosPerez93',
   githubUrl: 'https://github.com/CarlosPerez93',
   memberSince: '2019',
@@ -36,10 +32,10 @@ export const profile: Profile = {
   linkedinHandle: 'carlos-perez93',
   linkedinUrl: 'https://www.linkedin.com/in/carlos-perez93',
   facts: [
-    { label: 'En GitHub desde', value: '2019' },
-    { label: 'Repositorios públicos', value: '19' },
-    { label: 'Especialidad', value: 'Front-end' },
-    { label: 'Experiencia', value: 'Desde 2020' },
+    { label: 'Especialidad', value: 'Frontend Engineering' },
+    { label: 'Core Stack', value: 'React · TypeScript · CSS' },
+    { label: 'Estado & APIs', value: 'GraphQL · REST · Redux' },
+    { label: 'Formación', value: 'Ingeniería de Sistemas' },
   ],
   sources: [
     { platform: 'GitHub', label: '@CarlosPerez93', href: 'https://github.com/CarlosPerez93' },

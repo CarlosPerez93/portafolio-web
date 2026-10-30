@@ -53,7 +53,7 @@ export interface Profile {
   readonly headline: string
   readonly bio: readonly string[]
   readonly focus: readonly string[]
-  readonly avatar: string
+  readonly avatar?: string
   readonly email: string
   readonly location: string | null
   readonly githubHandle: string
