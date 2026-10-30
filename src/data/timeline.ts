@@ -68,7 +68,3 @@ export const timeline: readonly TimelineEntry[] = [
     ],
   },
 ]
-
-/** Procedencia que se muestra al pie de la sección. */
-export const timelineNote =
-  'Fechas tomadas del historial público de GitHub, una entrada por año con al menos un repositorio. Esta línea de tiempo recoge solo el código: los puestos están en Experiencia (04) y la formación, en Estudios (05).'

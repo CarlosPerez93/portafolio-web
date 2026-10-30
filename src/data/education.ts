@@ -31,7 +31,3 @@ export const education: readonly EducationEntry[] = [
     period: 'febrero de 2025',
   },
 ]
-
-/** Procedencia que se muestra al pie de la sección. */
-export const educationNote =
-  'Centros, titulaciones y fechas provienen de la copia exportada del perfil de LinkedIn. El registro de la Universidad de La Amazonia llega hasta agosto de 2026; el de midudev consta solo con el mes de febrero de 2025, sin fecha de fin.'

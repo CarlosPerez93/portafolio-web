@@ -52,14 +52,3 @@ export const experience: readonly ExperienceEntry[] = [
     stack: ['HTML', 'Sass', 'JS', 'React', 'Ant Design', 'Firebase', 'Axios', 'Moment'],
   },
 ]
-
-/**
- * Procedencia y límites de la sección.
- *
- * Las fechas se solapan en dos tramos y se muestran tal cual: entre marzo y
- * noviembre de 2022 conviven el puesto en IVO Internacional y el de la
- * Universidad de La Amazonia, y entre diciembre de 2022 y enero de 2023, OnPlay
- * y la Universidad de La Amazonia. No se han ajustado para que encajen.
- */
-export const experienceNote =
-  'Puestos, cargos, fechas y descripciones provienen de la copia exportada del perfil de LinkedIn; no hay responsabilidades ni logros añadidos. Dos tramos se solapan y se muestran sin corregir: IVO Internacional y la Universidad de La Amazonia entre marzo y noviembre de 2022, y OnPlay y la Universidad de La Amazonia entre diciembre de 2022 y enero de 2023.'
