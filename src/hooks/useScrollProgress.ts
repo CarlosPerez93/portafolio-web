@@ -1,10 +1,5 @@
 import { useEffect, useState } from 'react'
 
-/**
- * Progreso de lectura de la página, de 0 a 1.
- * Se calcula dentro de `requestAnimationFrame` para no encadenar lecturas de
- * layout en cada evento de scroll.
- */
 export function useScrollProgress(): number {
   const [progress, setProgress] = useState(0)
 

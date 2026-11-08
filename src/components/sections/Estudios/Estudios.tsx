@@ -1,17 +1,11 @@
-import { Section } from '../../layout/Section'
 import { Reveal } from '../../ui/Reveal'
-import styles from './Estudios.module.css'
+import { Section } from '../../layout/Section'
+
 import type { EstudiosProps } from './Estudios.types'
 
-/**
- * Estudios.
- *
- * Misma retícula de registro que la experiencia, con una diferencia: aquí el
- * dato que encabeza cada ficha es la titulación, no el centro. El tipo se
- * muestra como etiqueta para separar el título universitario del curso y de la
- * formación abierta sin jerarquizarlos de más.
- */
-export function Estudios({ entries, note }: EstudiosProps) {
+import styles from './Estudios.module.css'
+
+export function Estudios({ entries }: EstudiosProps) {
   return (
     <Section
       id="estudios"
@@ -50,8 +44,6 @@ export function Estudios({ entries, note }: EstudiosProps) {
           </li>
         ))}
       </ol>
-
-      <p className={styles.note}>{note}</p>
     </Section>
   )
 }

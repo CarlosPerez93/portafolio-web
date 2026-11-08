@@ -7,10 +7,6 @@ function getInitialValue(): boolean {
   return window.matchMedia(QUERY).matches
 }
 
-/**
- * Indica si la persona usuaria pidió reducir el movimiento.
- * Las animaciones decorativas se desactivan; la información nunca depende de ellas.
- */
 export function usePrefersReducedMotion(): boolean {
   const [reduced, setReduced] = useState(getInitialValue)
 

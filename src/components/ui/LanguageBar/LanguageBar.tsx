@@ -1,17 +1,11 @@
 import type { CSSProperties } from 'react'
 
 import { useInView } from '../../../hooks'
-import { cx, formatNumber, formatPercent } from '../../../utils'
-import styles from './LanguageBar.module.css'
 import type { LanguageBarProps } from './LanguageBar.types'
+import { cx, formatNumber, formatPercent } from '../../../utils'
 
-/**
- * Una fila del informe de lenguajes.
- *
- * El dato está en texto (bytes y porcentaje); la barra es una repetición visual
- * marcada como decorativa, así que no aporta ni quita información a un lector
- * de pantalla. Se traza al entrar en el viewport.
- */
+import styles from './LanguageBar.module.css'
+
 export function LanguageBar({ stat, delay = 0 }: LanguageBarProps) {
   const { ref, inView } = useInView<HTMLLIElement>({ threshold: 0.4 })
 

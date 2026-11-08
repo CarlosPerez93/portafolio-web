@@ -38,7 +38,6 @@
   max-width: 34ch;
 }
 
-/* Sección invertida: redefine la capa de color, no los valores literales. */
 .ink {
   --paper: #16130f;
   --paper-raised: #221e18;

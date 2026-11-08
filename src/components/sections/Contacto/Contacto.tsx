@@ -1,16 +1,10 @@
 import { Section } from '../../layout/Section'
+
 import { SocialLinks } from '../../ui/SocialLinks'
-import styles from './Contacto.module.css'
 import type { ContactoProps } from './Contacto.types'
 
-/**
- * Contacto.
- *
- * Una sola acción principal —escribir— a escala de titular, y los perfiles al
- * lado. Sin formulario: el sitio es estático y no hay nada que enviar ni
- * guardar. La dirección de correo es el texto del enlace, así que se puede
- * copiar a mano si el cliente de correo no está configurado.
- */
+import styles from './Contacto.module.css'
+
 export function Contacto({ profile, socials }: ContactoProps) {
   return (
     <Section

@@ -1,7 +1,6 @@
 import styles from './Footer.module.css'
 import type { FooterProps } from './Footer.types'
 
-/** Pie de página: autoría, tecnología y procedencia de los datos. */
 export function Footer({ profile }: FooterProps) {
   const year = new Date().getFullYear()
 

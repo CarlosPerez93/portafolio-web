@@ -5,12 +5,14 @@ const percentFormatter = new Intl.NumberFormat('es-ES', {
   maximumFractionDigits: 1,
 })
 
-/** 638982 → "638.982" */
 export function formatNumber(value: number): string {
   return numberFormatter.format(value)
 }
 
-/** 53.34 → "53,3 %" */
 export function formatPercent(value: number): string {
   return `${percentFormatter.format(value)} %`
+}
+
+export function ordinal(position: number): string {
+  return String(position).padStart(2, '0')
 }

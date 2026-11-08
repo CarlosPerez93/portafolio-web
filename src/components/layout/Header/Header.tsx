@@ -1,16 +1,11 @@
 import type { CSSProperties } from 'react'
 
-import { useScrollProgress } from '../../../hooks'
 import { cx } from '../../../utils'
-import styles from './Header.module.css'
 import type { HeaderProps } from './Header.types'
+import { useScrollProgress } from '../../../hooks'
 
-/**
- * Cabecera fija con el índice de secciones.
- *
- * El filete superior mide el avance de lectura; el elemento activo se marca con
- * `aria-current` además del subrayado, así que la posición no depende del color.
- */
+import styles from './Header.module.css'
+
 export function Header({ items, activeId }: HeaderProps) {
   const progress = useScrollProgress()
 

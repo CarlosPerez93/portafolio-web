@@ -1,14 +1,6 @@
-import type { SkillReport } from '../types'
 import { formatNumber } from '../utils'
+import type { SkillReport } from '../types'
 
-/**
- * Habilidades medidas, no declaradas.
- *
- * Los porcentajes salen del peso en bytes que GitHub atribuye a cada lenguaje
- * en los repositorios públicos con código del perfil. Es una foto del código
- * escrito, no una escala de dominio: por eso el informe declara cuántos bytes
- * se analizaron y qué queda fuera del desglose.
- */
 export const skillReport: SkillReport = {
   repositoryCount: 17,
   analysedBytes: 947_296,

@@ -1,6 +1,6 @@
 import type { NavItem, SectionId } from '../../../types'
 
-export interface HeaderProps {
-  readonly items: readonly NavItem[]
+export type HeaderProps = {
   readonly activeId: SectionId
+  readonly items: readonly NavItem[]
 }

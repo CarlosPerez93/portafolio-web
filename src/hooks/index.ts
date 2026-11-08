@@ -1,4 +1,4 @@
-export { useActiveSection } from './useActiveSection'
 export { useInView } from './useInView'
-export { usePrefersReducedMotion } from './usePrefersReducedMotion'
+export { useActiveSection } from './useActiveSection'
 export { useScrollProgress } from './useScrollProgress'
+export { usePrefersReducedMotion } from './usePrefersReducedMotion'

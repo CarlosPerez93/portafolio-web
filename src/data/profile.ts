@@ -1,11 +1,5 @@
 ﻿import type { Profile } from '../types'
 
-/**
- * Perfil público.
- *
- * Procedencia: datos de contacto, enlaces y trayectoria técnica verificada.
- * Estilo centrado en ingeniería, arquitectura de interfaz y calidad de producto.
- */
 export const profile: Profile = {
   name: 'Carlos Pérez',
   role: 'Frontend Engineer',

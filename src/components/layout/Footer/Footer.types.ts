@@ -1,5 +1,5 @@
 import type { Profile } from '../../../types'
 
-export interface FooterProps {
+export type FooterProps = {
   readonly profile: Profile
 }

@@ -1,9 +1,3 @@
-/*
- * Contacto.
- * La dirección de correo es el titular de la sección: un solo enlace, grande,
- * con la flecha como remate. Todo lo demás es contexto.
- */
-
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
@@ -18,8 +12,6 @@
   text-transform: uppercase;
   color: var(--ink-faint);
 }
-
-/* --- Acción principal ----------------------------------------------------- */
 
 .mail {
   display: inline-flex;
@@ -43,7 +35,6 @@
   word-break: break-word;
 }
 
-/* La dirección se parte si no cabe; el subrayado acompaña al bloque. */
 .mailText {
   display: inline;
 }
@@ -73,7 +64,6 @@
   transform: translate(0.18em, -0.18em);
 }
 
-/* Objetivo de pulsación cómodo en pantallas táctiles. */
 .mail:focus-visible {
   outline-offset: 6px;
 }
@@ -85,8 +75,6 @@
   line-height: 1.7;
   color: var(--ink-soft);
 }
-
-/* --- Perfiles ------------------------------------------------------------- */
 
 .secondary {
   padding-top: 0.85rem;

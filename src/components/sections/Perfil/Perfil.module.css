@@ -31,7 +31,6 @@
   color: var(--accent);
 }
 
-/* El nombre es el único elemento a escala de portada. */
 .name {
   margin-top: 0.65rem;
   font-family: var(--font-display);
@@ -54,7 +53,6 @@
   color: var(--accent);
 }
 
-/* Filete que se traza una sola vez al cargar: el gesto de la página, sin ruido. */
 .rule {
   display: block;
   width: clamp(3rem, 9vw, 7rem);
@@ -85,8 +83,6 @@
   letter-spacing: -0.01em;
   color: var(--ink-soft);
 }
-
-/* --- Cuerpo ------------------------------------------------------------- */
 
 .lower {
   display: grid;
@@ -145,8 +141,6 @@
   color: var(--accent);
   padding-top: 0.15rem;
 }
-
-/* --- Datos y perfiles --------------------------------------------------- */
 
 .fact {
   display: flex;

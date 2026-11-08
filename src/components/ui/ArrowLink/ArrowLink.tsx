@@ -1,11 +1,8 @@
 import { cx } from '../../../utils'
-import styles from './ArrowLink.module.css'
 import type { ArrowLinkProps } from './ArrowLink.types'
 
-/**
- * Enlace con flecha. La flecha avanza 3 px al pasar el cursor y al enfocar:
- * el mismo gesto en toda la página, sin mover el texto.
- */
+import styles from './ArrowLink.module.css'
+
 export function ArrowLink({
   href,
   children,

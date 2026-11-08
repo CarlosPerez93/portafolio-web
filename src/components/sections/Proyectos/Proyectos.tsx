@@ -1,21 +1,12 @@
+import { Reveal } from '../../ui/Reveal'
 import { Section } from '../../layout/Section'
 import { ProjectCard } from '../../ui/ProjectCard'
-import { Reveal } from '../../ui/Reveal'
-import styles from './Proyectos.module.css'
+
+import { ordinal } from '../../../utils/format'
 import type { ProyectosProps } from './Proyectos.types'
 
-/** Numeración correlativa: los destacados ocupan las primeras posiciones. */
-function ordinal(position: number): string {
-  return String(position).padStart(2, '0')
-}
+import styles from './Proyectos.module.css'
 
-/**
- * Proyectos.
- *
- * Dos escalas del mismo objeto: cuatro tarjetas completas y el resto en
- * fichas compactas. La numeración es continua para que el archivo se lea como
- * una lista y no como dos bloques sin relación.
- */
 export function Proyectos({ featured, secondary }: ProyectosProps) {
   return (
     <Section

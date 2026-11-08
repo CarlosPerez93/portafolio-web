@@ -14,7 +14,6 @@
   border-top-color: var(--line-strong);
 }
 
-/* Marca de registro + año: la fecha se lee antes que el relato. */
 .yearCell {
   display: flex;
   align-items: center;

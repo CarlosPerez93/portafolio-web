@@ -1,9 +1,10 @@
-import { cx } from '../../../utils'
 import { SocialIcon } from '../SocialIcon'
-import styles from './SocialLinks.module.css'
+
+import { cx } from '../../../utils'
 import type { SocialLinksProps } from './SocialLinks.types'
 
-/** Lista de perfiles y correo. Toda la fila es el objetivo del enlace. */
+import styles from './SocialLinks.module.css'
+
 export function SocialLinks({ socials, layout = 'stack', className }: SocialLinksProps) {
   return (
     <ul role="list" className={cx(styles.list, styles[layout], className)}>

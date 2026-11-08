@@ -1,18 +1,12 @@
-import { Section } from '../../layout/Section'
 import { Chip } from '../../ui/Chip'
 import { Reveal } from '../../ui/Reveal'
-import styles from './Experiencia.module.css'
+import { Section } from '../../layout/Section'
+
 import type { ExperienciaProps } from './Experiencia.types'
 
-/**
- * Experiencia.
- *
- * La misma retícula de registro que usa la trayectoria —fecha a la izquierda,
- * marca cuadrada, relato a la derecha— aplicada a los puestos. La fecha va en
- * columna propia porque es el dato que se compara de un vistazo; el stack se
- * muestra como etiquetas para no convertirlo en prosa.
- */
-export function Experiencia({ entries, note }: ExperienciaProps) {
+import styles from './Experiencia.module.css'
+
+export function Experiencia({ entries }: ExperienciaProps) {
   return (
     <Section
       id="experiencia"
@@ -68,8 +62,6 @@ export function Experiencia({ entries, note }: ExperienciaProps) {
           </li>
         ))}
       </ol>
-
-      <p className={styles.note}>{note}</p>
     </Section>
   )
 }

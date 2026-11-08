@@ -8,7 +8,6 @@
   margin-top: clamp(2.75rem, 6vw, 4.5rem);
 }
 
-/* Rótulo de archivo, no encabezado: los títulos de proyecto siguen siendo h3. */
 .restLabel {
   display: flex;
   align-items: baseline;

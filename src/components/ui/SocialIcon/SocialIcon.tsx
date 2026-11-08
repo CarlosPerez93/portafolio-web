@@ -1,10 +1,7 @@
-import styles from './SocialIcon.module.css'
 import type { SocialIconProps } from './SocialIcon.types'
 
-/**
- * Iconos dibujados a mano en SVG, sin dependencias.
- * Siempre decorativos: el nombre del enlace va en texto junto al icono.
- */
+import styles from './SocialIcon.module.css'
+
 export function SocialIcon({ icon, className }: SocialIconProps) {
   const shared = {
     className: [styles.icon, className].filter(Boolean).join(' '),

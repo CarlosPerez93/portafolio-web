@@ -1,19 +1,12 @@
-import { formatNumber, formatPercent } from '../../../utils'
-import { Section } from '../../layout/Section'
 import { Chip } from '../../ui/Chip'
-import { LanguageBar } from '../../ui/LanguageBar'
 import { Reveal } from '../../ui/Reveal'
-import styles from './Habilidades.module.css'
+import { Section } from '../../layout/Section'
+import { LanguageBar } from '../../ui/LanguageBar'
 import type { HabilidadesProps } from './Habilidades.types'
+import { formatNumber, formatPercent } from '../../../utils'
 
-/**
- * Habilidades.
- *
- * El informe de lenguajes se presenta como lo que es: una medición sobre los
- * repositorios públicos. A la derecha, los grupos ordenan el trabajo por
- * problema resuelto (interfaz, estado, herramientas, exploración) en lugar de
- * por supuesta destreza, que es lo que no se puede demostrar con bytes.
- */
+import styles from './Habilidades.module.css'
+
 export function Habilidades({ report, method, caveat, roundingNote }: HabilidadesProps) {
   return (
     <Section

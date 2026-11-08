@@ -1,13 +1,5 @@
 import type { TimelineEntry } from '../types'
 
-/**
- * Trayectoria: una etapa por año, solo código.
- *
- * Todas las fechas salen del historial público de GitHub y llevan la fecha del
- * repositorio. Los puestos y la formación no se repiten aquí: tienen sección
- * propia —Experiencia (04) y Estudios (05)— y duplicarlos convertiría la misma
- * página en dos relatos del mismo dato.
- */
 export const timeline: readonly TimelineEntry[] = [
   {
     year: '2022',

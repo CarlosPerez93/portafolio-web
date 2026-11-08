@@ -1,16 +1,11 @@
-import { cx } from '../../../utils'
-import { ArrowLink } from '../ArrowLink'
 import { Chip } from '../Chip'
-import styles from './ProjectCard.module.css'
+import { ArrowLink } from '../ArrowLink'
+
+import { cx } from '../../../utils'
 import type { ProjectCardProps } from './ProjectCard.types'
 
-/**
- * Tarjeta de proyecto.
- *
- * Una sola pieza resuelve el bloque destacado y la ficha compacta: la variante
- * cambia la escala tipográfica, no la estructura ni la información. Si un
- * proyecto no trae enlaces, el bloque se omite y la tarjeta sigue siendo legible.
- */
+import styles from './ProjectCard.module.css'
+
 export function ProjectCard({ project, variant = 'feature', index }: ProjectCardProps) {
   return (
     <article className={cx(styles.card, styles[variant])}>

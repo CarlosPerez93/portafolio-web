@@ -7,7 +7,6 @@
   border-top: var(--hairline) solid var(--line-strong);
 }
 
-/* Filete de acento que se traza sobre el borde al pasar el cursor o al enfocar. */
 .card::after {
   content: '';
   position: absolute;

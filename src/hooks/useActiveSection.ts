@@ -1,13 +1,7 @@
 import { useEffect, useState } from 'react'
+
 import type { SectionId } from '../types'
 
-/**
- * Devuelve la sección que ocupa el centro de la pantalla.
- *
- * Se usa una banda de observación estrecha (el tercio central) en lugar del
- * scroll: así el indicador del menú coincide con lo que se está leyendo y no
- * con el último fragmento que rozó el borde superior.
- */
 export function useActiveSection(ids: readonly SectionId[]): SectionId {
   const [active, setActive] = useState<SectionId>(ids[0])
 

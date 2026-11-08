@@ -14,7 +14,6 @@
   border-top-color: var(--line-strong);
 }
 
-/* Fecha y marca de registro en la misma columna que la trayectoria. */
 .periodCell {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -82,7 +81,6 @@
   color: var(--ink-soft);
 }
 
-/* Hueco declarado: el registro no trae descripción y no se rellena. */
 .gap {
   max-width: 62ch;
   margin-top: 0.7rem;

@@ -1,17 +1,11 @@
 import { Reveal } from '../../ui/Reveal'
-import { SectionMarker } from '../../ui/SectionMarker'
 import { SocialLinks } from '../../ui/SocialLinks'
-import styles from './Perfil.module.css'
+import { SectionMarker } from '../../ui/SectionMarker'
+
 import type { PerfilProps } from './Perfil.types'
 
-/**
- * Portada.
- *
- * Es la única sección con `h1` y no usa el marco numerado: la cabecera de la
- * página ya está ocupada por el índice, así que aquí manda la tipografía. El
- * nombre se parte en el primer espacio (el perfil declara un nombre de dos
- * palabras) para poder tratar el apellido como una decisión tipográfica.
- */
+import styles from './Perfil.module.css'
+
 export function Perfil({ profile, socials }: PerfilProps) {
   const [givenName, ...rest] = profile.name.split(' ')
   const familyName = rest.join(' ')

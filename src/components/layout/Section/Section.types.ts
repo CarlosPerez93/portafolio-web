@@ -4,7 +4,7 @@ import type { SectionId } from '../../../types'
 
 export type SectionTone = 'paper' | 'ink'
 
-export interface SectionProps {
+export type SectionProps = {
   readonly id: SectionId
   readonly index: string
   readonly eyebrow: string

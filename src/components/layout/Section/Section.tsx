@@ -1,15 +1,10 @@
-import { cx } from '../../../utils'
 import { SectionMarker } from '../../ui/SectionMarker'
-import styles from './Section.module.css'
+
+import { cx } from '../../../utils'
 import type { SectionProps } from './Section.types'
 
-/**
- * Marco común de las secciones numeradas.
- *
- * Resuelve lo que no debería repetirse: el ancla, el `aria-labelledby`, el
- * filete superior, la numeración y la jerarquía de encabezados. El contenido
- * entra como `children` y no conoce nada de este marco.
- */
+import styles from './Section.module.css'
+
 export function Section({
   id,
   index,

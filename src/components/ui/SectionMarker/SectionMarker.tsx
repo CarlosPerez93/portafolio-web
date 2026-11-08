@@ -1,12 +1,7 @@
-import styles from './SectionMarker.module.css'
 import type { SectionMarkerProps } from './SectionMarker.types'
 
-/**
- * Marcador de sección: número, filete y etiqueta.
- *
- * Es el mismo gesto en la portada y en las secciones numeradas; vive aparte
- * para que ambos lo compartan en lugar de repetir el marcado.
- */
+import styles from './SectionMarker.module.css'
+
 export function SectionMarker({ index, label }: SectionMarkerProps) {
   return (
     <p className={styles.marker}>

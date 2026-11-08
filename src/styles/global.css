@@ -62,7 +62,6 @@ body {
   border: 0;
 }
 
-/* Main sin foco visible al recibir el skip link. */
 main:focus {
   outline: none;
 }

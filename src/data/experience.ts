@@ -1,17 +1,5 @@
 import type { ExperienceEntry } from '../types'
 
-/**
- * Experiencia profesional.
- *
- * Procedencia: copia exportada del perfil de LinkedIn (sección «Experiencia»).
- * Se conserva el orden del documento y no se reordena por relevancia. El texto
- * de cada descripción es el del registro, con los saltos de línea del PDF
- * unidos; la lista de tecnologías son esos mismos términos, normalizados solo en
- * mayúsculas y guiones para poder mostrarlos como etiquetas.
- *
- * El registro de la Universidad Surcolombiana no trae descripción en la copia:
- * se deja como hueco visible en lugar de rellenarlo.
- */
 export const experience: readonly ExperienceEntry[] = [
   {
     company: 'Universidad Surcolombiana',

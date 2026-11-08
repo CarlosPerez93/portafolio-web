@@ -1,11 +1,3 @@
-/**
- * Modelo de dominio del portafolio.
- *
- * Toda la información que consume la interfaz pasa por estos tipos: las
- * secciones no conocen la forma de los datos, solo reciben entidades.
- */
-
-/** Identificadores de las secciones que participan de la navegación. */
 export const SECTION_IDS = [
   'perfil',
   'proyectos',
@@ -84,7 +76,7 @@ export interface Project {
   readonly stack: readonly string[]
   readonly links: readonly ProjectLink[]
   readonly featured: boolean
-  /** Señal verificable y breve: estrellas, estado del repositorio, etc. */
+
   readonly signal?: string
 }
 
@@ -92,7 +84,6 @@ export interface LanguageStat {
   readonly name: string
   readonly bytes: number
   readonly percent: number
-  /** El lenguaje con más código del perfil se destaca en la escala. */
   readonly highlight: boolean
 }
 
@@ -111,8 +102,6 @@ export interface SkillReport {
   readonly remainder: { readonly label: string; readonly percent: number }
   readonly groups: readonly SkillGroup[]
 }
-
-/** Etapa profesional tal como consta en la copia exportada del perfil. */
 export interface ExperienceEntry {
   readonly company: string
   readonly role: string
@@ -127,11 +116,9 @@ export interface ExperienceEntry {
 
 export type EducationKind = 'Titulación' | 'Curso superior' | 'Formación'
 
-/** Estudio o curso tal como consta en la copia exportada del perfil. */
 export interface EducationEntry {
   readonly institution: string
   readonly qualification: string
-  /** Segunda línea del registro (campo de estudio); `null` si no la trae. */
   readonly field: string | null
   readonly kind: EducationKind
   readonly period: string

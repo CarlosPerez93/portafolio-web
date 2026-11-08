@@ -1,6 +1,5 @@
 import type { NavItem } from '../types'
 
-/** Orden de lectura de la página; coincide con el índice que muestra cada sección. */
 export const navigation: readonly NavItem[] = [
   { id: 'perfil', label: 'Perfil', index: '01' },
   { id: 'proyectos', label: 'Proyectos', index: '02' },

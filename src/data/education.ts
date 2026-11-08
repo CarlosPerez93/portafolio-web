@@ -1,13 +1,5 @@
 import type { EducationEntry } from '../types'
 
-/**
- * Formación.
- *
- * Procedencia: copia exportada del perfil de LinkedIn (sección «Educación»).
- * Un registro por institución, en el orden del documento. El nombre del centro,
- * el título y las fechas son los del registro; la etiqueta de tipo se deduce de
- * la propia denominación del título, no de una valoración externa.
- */
 export const education: readonly EducationEntry[] = [
   {
     institution: 'Universidad de La Amazonia',

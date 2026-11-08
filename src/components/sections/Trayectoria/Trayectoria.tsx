@@ -1,16 +1,11 @@
-import { Section } from '../../layout/Section'
 import { Reveal } from '../../ui/Reveal'
-import styles from './Trayectoria.module.css'
+import { Section } from '../../layout/Section'
+
 import type { TrayectoriaProps } from './Trayectoria.types'
 
-/**
- * Trayectoria.
- *
- * Una lista ordenada de hitos fechados. El año se separa del relato en una
- * columna propia con una marca cuadrada: el mismo gesto de registro que usa el
- * retrato, aplicado aquí a la cronología.
- */
-export function Trayectoria({ entries, note }: TrayectoriaProps) {
+import styles from './Trayectoria.module.css'
+
+export function Trayectoria({ entries }: TrayectoriaProps) {
   return (
     <Section
       id="trayectoria"
@@ -42,8 +37,6 @@ export function Trayectoria({ entries, note }: TrayectoriaProps) {
           </li>
         ))}
       </ol>
-
-      <p className={styles.note}>{note}</p>
     </Section>
   )
 }

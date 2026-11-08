@@ -1,24 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import type { RefObject } from 'react'
 
-interface UseInViewOptions {
-  /** Porción visible necesaria para considerar el elemento dentro del viewport. */
-  readonly threshold?: number
-  readonly rootMargin?: string
-  /** Si es `true`, deja de observar tras la primera aparición. */
-  readonly once?: boolean
-}
+import type { UseInViewOptions, UseInViewResult } from './hook.type'
 
-interface UseInViewResult<T extends Element> {
-  readonly ref: RefObject<T | null>
-  readonly inView: boolean
-}
-
-/**
- * Observa un elemento y avisa cuando entra en pantalla.
- * Sin `IntersectionObserver` (o sin DOM) el contenido se muestra de inmediato:
- * el efecto es decorativo, nunca un requisito para leer.
- */
 export function useInView<T extends Element = HTMLDivElement>(
   options: UseInViewOptions = {},
 ): UseInViewResult<T> {

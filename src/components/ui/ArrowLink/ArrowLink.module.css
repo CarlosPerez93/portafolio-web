@@ -24,7 +24,6 @@
   transform: translateX(3px);
 }
 
-/* Variante de texto: subrayado que crece desde la izquierda. */
 .text .label {
   padding-bottom: 2px;
   background-image: linear-gradient(currentColor, currentColor);
@@ -39,7 +38,6 @@
   background-position: 100% 100%;
 }
 
-/* Variante de botón: caja de esquinas rectas que se invierte al interactuar. */
 .button {
   padding: 0.65rem 1rem 0.65rem 1.1rem;
   border: var(--hairline) solid var(--ink);

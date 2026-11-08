@@ -7,14 +7,14 @@ import { Habilidades } from './components/sections/Habilidades'
 import { Perfil } from './components/sections/Perfil'
 import { Proyectos } from './components/sections/Proyectos'
 import { Trayectoria } from './components/sections/Trayectoria'
-import { education, educationNote } from './data/education'
-import { experience, experienceNote } from './data/experience'
+import { education } from './data/education'
+import { experience } from './data/experience'
 import { navigation } from './data/navigation'
 import { profile } from './data/profile'
 import { featuredProjects, secondaryProjects } from './data/projects'
 import { skillReport, skillsCaveat, skillsMethod, skillsRoundingNote } from './data/skills'
 import { socials } from './data/socials'
-import { timeline, timelineNote } from './data/timeline'
+import { timeline } from './data/timeline'
 import { useActiveSection } from './hooks'
 import { SECTION_IDS } from './types'
 
@@ -49,11 +49,11 @@ function App() {
           roundingNote={skillsRoundingNote}
         />
 
-        <Experiencia entries={experience} note={experienceNote} />
+        <Experiencia entries={experience} />
 
-        <Estudios entries={education} note={educationNote} />
+        <Estudios entries={education} />
 
-        <Trayectoria entries={timeline} note={timelineNote} />
+        <Trayectoria entries={timeline} />
 
         <Contacto profile={profile} socials={socials} />
       </main>

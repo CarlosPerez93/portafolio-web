@@ -1,12 +1,5 @@
 ﻿import type { Project } from '../types'
 
-/**
- * Proyectos tomados de los repositorios públicos del perfil, más LUMIKO,
- * que el autor indicó destacar y que ahora también publica su código.
- *
- * Cada descripción se apoya en el README, la descripción del repositorio o su
- * árbol de archivos. No se atribuyen funcionalidades no documentadas.
- */
 export const projects: readonly Project[] = [
   {
     id: 'jarvis',
