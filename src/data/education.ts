@@ -6,7 +6,7 @@ export const education: readonly EducationEntry[] = [
     qualification: 'Ingeniero de Sistemas',
     field: 'Systems Engineering',
     kind: 'Titulación',
-    period: 'febrero de 2013 – agosto de 2026',
+    period: 'agosto de 2026',
   },
   {
     institution: 'Deusto Formación',
